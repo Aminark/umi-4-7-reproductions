@@ -1,0 +1,5 @@
+{
+  "extends": "./src/.umi/tsconfig.json",
+  "compilerOptions": { "skipLibCheck": true, "noEmit": true },
+  "include": ["check.ts", "src/pages"]
+}

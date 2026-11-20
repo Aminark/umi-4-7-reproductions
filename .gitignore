@@ -4,3 +4,5 @@ dist/
 .umi-*/
 .DS_Store
 /static-extra-routes/server/
+/ssr-route-data/server/
+/nested-page-title/server/

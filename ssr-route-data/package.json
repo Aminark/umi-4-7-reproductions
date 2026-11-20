@@ -1,0 +1,15 @@
+{
+  "name": "ssr-route-data",
+  "private": true,
+  "scripts": {
+    "build": "umi build",
+    "preview": "umi preview",
+    "serve": "node serve.cjs"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "umi": "4.7.35",
+    "express": "4.21.2"
+  }
+}

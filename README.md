@@ -1,6 +1,15 @@
 # Umi 4.7.35 最小复现
 
-三个例子共用一次依赖安装。在仓库根目录运行 `npm install`，下面的命令也都在根目录执行。验证环境为 Node.js 22.23.4、React 18.3.1 和 macOS 15.7.7 arm64。
+这些例子共用一次依赖安装。在仓库根目录运行 `npm install`，下面的命令也都在根目录执行。验证环境为 Node.js 22.23.4、React 18.3.1 和 macOS 15.7.7 arm64。
+
+## 路由、数据加载和构建
+
+- [动态路由切换后，先前的 clientLoader 会覆盖当前页面的数据](./loader-navigation-race)
+- [SSR 首屏加载后通过 Link 进入另一页，目标页的 serverLoader 数据缺失](./ssr-route-data)
+- [嵌套路由预渲染时，较慢的父级 loader 会覆盖子页标题](./nested-page-title)
+- [MPA 的 index.ts 入口会生成含 JSX 的 .ts 文件，导致构建失败](./mpa-ts-entry)
+- [keepQuery 遇到自带查询参数的重定向目标，会把两个参数拼成一个值](./redirect-query)
+- [useLoaderData 的泛型返回类型缺少运行时的 data 字段](./loader-result-type)
 
 ## 静态导出拒绝对象数组
 

@@ -4,6 +4,12 @@
   "workspaces": [
     "static-extra-routes",
     "convention-route-index",
-    "preview-mock"
+    "preview-mock",
+    "loader-navigation-race",
+    "redirect-query",
+    "mpa-ts-entry",
+    "ssr-route-data",
+    "nested-page-title",
+    "loader-result-type"
   ]
 }
