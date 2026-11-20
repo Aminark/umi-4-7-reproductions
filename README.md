@@ -4,12 +4,12 @@
 
 ## 路由、数据加载和构建
 
-- [动态路由切换后，先前的 clientLoader 会覆盖当前页面的数据](./loader-navigation-race)
-- [SSR 首屏加载后通过 Link 进入另一页，目标页的 serverLoader 数据缺失](./ssr-route-data)
-- [嵌套路由预渲染时，较慢的父级 loader 会覆盖子页标题](./nested-page-title)
-- [MPA 的 index.ts 入口会生成含 JSX 的 .ts 文件，导致构建失败](./mpa-ts-entry)
-- [keepQuery 遇到自带查询参数的重定向目标，会把两个参数拼成一个值](./redirect-query)
-- [useLoaderData 的泛型返回类型缺少运行时的 data 字段](./loader-result-type)
+- [动态路由切换后，先前的 clientLoader 会覆盖当前页面的数据](./loader-navigation-race) · [#13492](https://github.com/umijs/umi/issues/13492)
+- [SSR 首屏加载后通过 Link 进入另一页，目标页的 serverLoader 数据缺失](./ssr-route-data) · [#13493](https://github.com/umijs/umi/issues/13493)
+- [嵌套路由预渲染时，较慢的父级 loader 会覆盖子页标题](./nested-page-title) · [#13494](https://github.com/umijs/umi/issues/13494)
+- [MPA 的 index.ts 入口会生成含 JSX 的 .ts 文件，导致构建失败](./mpa-ts-entry) · [#13495](https://github.com/umijs/umi/issues/13495)
+- [keepQuery 遇到自带查询参数的重定向目标，会把两个参数拼成一个值](./redirect-query) · [#13496](https://github.com/umijs/umi/issues/13496)
+- [useLoaderData 的泛型返回类型缺少运行时的 data 字段](./loader-result-type) · [#13497](https://github.com/umijs/umi/issues/13497)
 
 ## 静态导出拒绝对象数组
 
