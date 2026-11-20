@@ -1,0 +1,46 @@
+# Umi 4.7.35 最小复现
+
+三个例子共用一次依赖安装。在仓库根目录运行 `npm install`，下面的命令也都在根目录执行。验证环境为 Node.js 22.23.4、React 18.3.1 和 macOS 15.7.7 arm64。
+
+## 静态导出拒绝对象数组
+
+[项目文件](./static-extra-routes)
+
+```sh
+npm run build -w static-extra-routes
+```
+
+项目有一条动态路由 `/news/:id`。配置为 `extraRoutePaths: [{ path: '/news/1', prerender: false }]` 时，构建在校验配置时退出，错误为 `Expected string, received object`。在 `static-extra-routes/.umirc.ts` 里把值改为 `() => [{ path: '/news/1', prerender: false }]` 再构建，可以生成 `static-extra-routes/dist/news/1/index.html`。
+
+## 单文件路由丢失文件名末尾的 index
+
+[项目文件](./convention-route-index)
+
+```sh
+npm run build -w convention-route-index
+```
+
+两个页面都使用约定式路由。开启 `exportStatic` 是为了直接从构建产物看到路径。
+
+| 页面文件 | 预期的输出 | 实际的输出 |
+| --- | --- | --- |
+| `src/pages/search-index.tsx` | `dist/search-index/index.html` | `dist/search-/index.html` |
+| `src/pages/archive-index/index.tsx` | `dist/archive-index/index.html` | `dist/archive-index/index.html` |
+
+## preview 在关闭 mock 后仍返回 mock 数据
+
+[项目文件](./preview-mock)
+
+```sh
+npm run build -w preview-mock
+cat preview-mock/dist/status.json
+npm run preview -w preview-mock -- --port 4194
+```
+
+构建产物是 `{"source":"static"}`。保持预览服务运行，在另一个终端请求同一文件。端口已被占用时，使用预览服务打印的端口。
+
+```sh
+curl -s http://127.0.0.1:4194/status.json
+```
+
+实际得到 `{"source":"mock"}`。项目已经设置了 `mock: false`，预期拿到构建产物里的 `{"source":"static"}`。

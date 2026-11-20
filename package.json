@@ -1,0 +1,9 @@
+{
+  "name": "umi-4-7-reproductions",
+  "private": true,
+  "workspaces": [
+    "static-extra-routes",
+    "convention-route-index",
+    "preview-mock"
+  ]
+}
