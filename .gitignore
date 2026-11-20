@@ -3,3 +3,4 @@ dist/
 .umi/
 .umi-*/
 .DS_Store
+/static-extra-routes/server/

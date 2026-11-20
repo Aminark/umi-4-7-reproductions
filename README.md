@@ -4,7 +4,7 @@
 
 ## 静态导出拒绝对象数组
 
-[项目文件](./static-extra-routes)
+[项目文件](./static-extra-routes) · [上游 issue #13486](https://github.com/umijs/umi/issues/13486)
 
 ```sh
 npm run build -w static-extra-routes
@@ -14,7 +14,7 @@ npm run build -w static-extra-routes
 
 ## 单文件路由丢失文件名末尾的 index
 
-[项目文件](./convention-route-index)
+[项目文件](./convention-route-index) · [上游 issue #13487](https://github.com/umijs/umi/issues/13487)
 
 ```sh
 npm run build -w convention-route-index
@@ -29,7 +29,7 @@ npm run build -w convention-route-index
 
 ## preview 在关闭 mock 后仍返回 mock 数据
 
-[项目文件](./preview-mock)
+[项目文件](./preview-mock) · [上游 issue #13488](https://github.com/umijs/umi/issues/13488)
 
 ```sh
 npm run build -w preview-mock
